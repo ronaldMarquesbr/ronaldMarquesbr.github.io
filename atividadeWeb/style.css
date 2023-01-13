@@ -1,0 +1,292 @@
+:root{
+    --margin-size: 75px;
+    --mgbot-size: 70%;
+    --alturainput: 50px;
+}
+
+@keyframes colors {
+    0%{
+        background-color: purple;
+    }
+    25%{
+        background-color: rebeccapurple;
+    }
+    50%{
+        background-color: violet;
+    }
+
+    75%{
+        background-color: blue;
+    }
+    100%{
+        background-color: rgb(111, 0, 255);
+    }
+}
+
+.container{
+    width: 500px;
+    height: 700px;
+    
+    background-color: rgb(255, 255, 255);
+    
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.274);
+
+    overflow:hidden;
+
+    
+}
+
+body{
+    background-image: url(./assets/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+ 
+}
+
+.person{
+    width: 100%;
+    
+
+}
+.title{
+    text-align: center;
+    font-family: 'Red Hat Display';
+    margin-bottom: 8px;
+
+}
+.description{
+    text-align: center;
+    font-family: 'Red Hat Display';
+    opacity: 70%;
+    
+    margin-left: var(--margin-size);
+    margin-right:var(--margin-size);
+
+    /* padding-bottom: 80px; */
+
+    margin-top: 0;
+    
+}
+.ond{
+    position: absolute;
+    bottom: -35px;
+    left: -10px;
+}
+
+
+.wave2{
+    fill:lightblue ;
+    animation-delay: 1.2s;
+} 
+
+.wave3{
+    fill: violet;    
+}
+
+.yes{
+    cursor: pointer;
+    margin: auto;
+    width: var(--mgbot-size);
+    height: var(--alturainput);
+    display: block;
+    
+    background-color: rgb(55, 43, 226);
+    border: none;
+    border-radius: 5px;
+
+    font-family: 'Red Hat Display';
+    font-size: 20px;
+    color: white;
+
+    position: absolute;
+
+    bottom: 105px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.329);
+
+    padding: 10px;
+
+    transition: all 0.5s ease-in-out;
+    
+}
+
+.no{
+    margin: auto;
+    width: var(--mgbot-size);
+    height:var(--alturainput);;
+    display: block;
+    transform: translateX(-50%); 
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 60px;
+    color: gray;
+
+    background-color: transparent;
+
+    font-family: 'Red Hat Display';
+
+    border: none;
+
+    font-size: 15px;
+
+}
+
+.no:active{
+    color:  rgb(55, 43, 226);
+}
+
+.card-plan{
+    width: var(--mgbot-size);
+    height: 80px;
+    
+    background-color: aliceblue;
+
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+
+    bottom: 200px;
+
+    font-family: 'Red Hat Display';
+
+    font-size: 12px;
+
+    display: grid;
+
+    grid-template: 100%/ 20% 60% 20%;
+    
+    align-items: center;
+
+    border-radius: 15px;
+
+    color: rgba(0, 0, 0, 0.801);
+
+    margin: 0px;
+    
+    
+    
+}
+.logobox{
+    position: absolute;
+    bottom: 50%;
+    transform: translate(-50%,50%);
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    left: 50%;
+    
+
+}
+
+.description-plan{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    align-items: flex-start;
+}
+.link-plan{
+    align-self: center;
+    justify-self: center;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+/* @media screen and (max-width:550px){
+
+    .container{
+        width: 450px;
+        height: 650px;
+    }
+    
+} */
+
+
+
+@media screen and (max-width:420px){
+
+    .container{
+        width: 90vw;
+        height: 80vh;
+        font-size: 1em;
+    }
+    a.link-plan{
+        /* font-size: 0.8em; */
+        position:absolute;
+        right: 10px;
+        font-size: 1em;
+    }
+    .card-plan{
+        width: 65vw;
+        bottom: 180px;
+        height: 10vh;
+    }
+    .description{
+        font-size: 1.7vh;
+    }
+    .logobox{
+        height: 40px;
+    }
+    .description-plan{
+        font-size: 0.9em;
+    }
+    .title{
+        margin-bottom: 0px;
+    }
+    input{
+        width: 65vw;
+    }
+    
+    
+}
+
+
+
+@media screen and (max-width:320px){
+
+
+    .container{
+        width: 80vw;
+        height: 90vh;
+    }
+    .ond{
+        transform: translateY(-20px);
+    }
+    .card-plan{
+        font-size: calc(1em - 40%);
+        height: 60px;
+        
+
+    }
+    .description{
+        margin: 15px;
+        font-size: calc(1em - 30%);
+    }
+    .card-plan{
+        position: absolute;
+        top: 53%;      
+    }
+    a.link-plan{
+        /* font-size: 0.8em; */
+        position:absolute;
+        right: 10px;
+        font-size: 1em;
+    }
+    .logobox{
+        width: 30px;
+    }
+    .title{
+        font-size: 1.5em;
+    }
+    [value]{
+        font-size: calc(1em - 30%);
+    }
+}
